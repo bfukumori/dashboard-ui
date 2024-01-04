@@ -2,6 +2,33 @@ import { Mail } from 'lucide-react'
 
 import { Input } from '../input'
 import { FileInput } from '../file-input'
+import { Select, SelectOption } from '../select'
+
+const COUNTRIES: SelectOption[] = [
+  {
+    text: 'Brazil',
+    value: 'BR',
+  },
+  {
+    text: 'United States',
+    value: 'US',
+  },
+  {
+    text: 'Japan',
+    value: 'JP',
+  },
+]
+
+const TIMEZONES: SelectOption[] = [
+  {
+    text: 'Pacific Standard Time (PST) (UTC-08:00)',
+    value: 'utc-8',
+  },
+  {
+    text: 'America Sao Paulo (PST) (UTC-03:00)',
+    value: 'utc-3',
+  },
+]
 
 export function DetailsTab() {
   return (
@@ -98,7 +125,7 @@ export function DetailsTab() {
           >
             Country
           </label>
-          <div></div>
+          <Select placeholder="Select a country..." options={COUNTRIES} />
         </div>
 
         <div className="grid-cols-form grid gap-3 pt-5">
@@ -108,7 +135,7 @@ export function DetailsTab() {
           >
             Timezone
           </label>
-          <div></div>
+          <Select placeholder="Select a timezone..." options={TIMEZONES} />
         </div>
 
         <div className="grid-cols-form grid gap-3 pt-5">
