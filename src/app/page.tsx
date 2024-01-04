@@ -1,7 +1,8 @@
 import { SettingsTabs, Tab } from '@/components/settings-tabs'
+import { DetailsTab } from '@/components/settings-tabs/details-tab'
 
 const TABS: Tab[] = [
-  { value: 'My details', content: <div>My details Page</div> },
+  { value: 'My details', content: <DetailsTab /> },
   { value: 'Profile', content: <div>Profile Page</div> },
   { value: 'Password', content: <div>Password Page</div> },
   { value: 'Team', content: <div>Team Page</div> },

@@ -22,7 +22,9 @@ export function Sidebar() {
       <Logo />
 
       <Input.Root>
-        <Input.Prefix icon={Search} />
+        <Input.Prefix>
+          <Search className="h-5 w-5 text-zinc-500" />
+        </Input.Prefix>
         <Input.Control type="search" placeholder="Search" />
       </Input.Root>
 
