@@ -10,14 +10,14 @@ export type SelectOption = {
   text: string
 }
 
-type SelectProps = {
+type SelectProps = SelectPrimitive.SelectProps & {
   options: SelectOption[]
   placeholder: string
 }
 
-export function Select({ options, placeholder }: SelectProps) {
+export function Select({ options, placeholder, ...props }: SelectProps) {
   return (
-    <SelectPrimitive.Root>
+    <SelectPrimitive.Root {...props}>
       <SelectPrimitive.Trigger className="flex h-11 w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm data-[placeholder]:text-zinc-600">
         <SelectPrimitive.Value
           className="text-black"
@@ -32,7 +32,7 @@ export function Select({ options, placeholder }: SelectProps) {
         <SelectPrimitive.Content
           side="bottom"
           position="popper"
-          className="z-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-300 bg-white"
+          className="z-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-300 bg-white shadow-sm"
           sideOffset={8}
         >
           <SelectPrimitive.ScrollUpButton />
@@ -42,7 +42,6 @@ export function Select({ options, placeholder }: SelectProps) {
             ))}
           </SelectPrimitive.Viewport>
           <SelectPrimitive.ScrollDownButton />
-          <SelectPrimitive.Arrow />
         </SelectPrimitive.Content>
       </SelectPrimitive.Portal>
     </SelectPrimitive.Root>

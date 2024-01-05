@@ -29,17 +29,17 @@ export function Sidebar() {
       </Input.Root>
 
       <nav className="space-y-0.5">
-        <NavItem title="Home" icon={Home} />
-        <NavItem title="Dashboard" icon={BarChart} />
-        <NavItem title="Projects" icon={SquareStack} />
-        <NavItem title="Tasks" icon={CheckSquare} />
-        <NavItem title="Reporting" icon={Flag} />
-        <NavItem title="Users" icon={Users} />
+        <NavItem to="/" title="Home" icon={Home} />
+        <NavItem to="/dashboard" title="Dashboard" icon={BarChart} />
+        <NavItem to="/projects" title="Projects" icon={SquareStack} />
+        <NavItem to="/tasks" title="Tasks" icon={CheckSquare} />
+        <NavItem to="/reporting" title="Reporting" icon={Flag} />
+        <NavItem to="/users" title="Users" icon={Users} />
       </nav>
 
       <nav className="mt-auto space-y-0.5">
-        <NavItem title="Support" icon={LifeBuoy} />
-        <NavItem title="Settings" icon={Cog} />
+        <NavItem to="/support" title="Support" icon={LifeBuoy} />
+        <NavItem to="/settings" title="Settings" icon={Cog} />
       </nav>
 
       <UsedSpaceWidget />
