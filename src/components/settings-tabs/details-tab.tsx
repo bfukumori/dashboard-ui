@@ -4,6 +4,7 @@ import { Input } from '../input'
 import { FileInput } from '../file-input'
 import { Select, SelectOption } from '../select'
 import { TextArea } from '../text-area'
+import { Button } from '../button'
 
 const COUNTRIES: SelectOption[] = [
   {
@@ -53,26 +54,19 @@ export function DetailsTab() {
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50"
-          >
+          <Button variant="outline" type="button">
             Cancel
-          </button>
-          <button
-            type="submit"
-            form="settings"
-            className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
-          >
+          </Button>
+          <Button variant="primary" type="submit" form="settings">
             Save
-          </button>
+          </Button>
         </div>
       </div>
       <form
         id="settings"
         className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
       >
-        <div className="grid-cols-form grid gap-3">
+        <div className="grid grid-cols-form gap-3">
           <label
             htmlFor="first-name"
             className="text-sm font-medium text-zinc-700"
@@ -89,7 +83,7 @@ export function DetailsTab() {
           </div>
         </div>
 
-        <div className="grid-cols-form grid gap-3 pt-5">
+        <div className="grid grid-cols-form gap-3 pt-5">
           <label htmlFor="email" className="text-sm font-medium text-zinc-700">
             Email address
           </label>
@@ -106,7 +100,7 @@ export function DetailsTab() {
           </Input.Root>
         </div>
 
-        <div className="grid-cols-form grid gap-3 pt-5">
+        <div className="grid grid-cols-form gap-3 pt-5">
           <label htmlFor="email" className="text-sm font-medium text-zinc-700">
             Your photo
             <span className="mt-0.5 block text-sm font-normal text-zinc-500">
@@ -120,7 +114,7 @@ export function DetailsTab() {
           </FileInput.Root>
         </div>
 
-        <div className="grid-cols-form grid gap-3 pt-5">
+        <div className="grid grid-cols-form gap-3 pt-5">
           <label htmlFor="role" className="text-sm font-medium text-zinc-700">
             Role
           </label>
@@ -130,7 +124,7 @@ export function DetailsTab() {
           </Input.Root>
         </div>
 
-        <div className="grid-cols-form grid gap-3 pt-5">
+        <div className="grid grid-cols-form gap-3 pt-5">
           <label
             htmlFor="country"
             className="text-sm font-medium text-zinc-700"
@@ -140,7 +134,7 @@ export function DetailsTab() {
           <Select placeholder="Select a country..." options={COUNTRIES} />
         </div>
 
-        <div className="grid-cols-form grid gap-3 pt-5">
+        <div className="grid grid-cols-form gap-3 pt-5">
           <label
             htmlFor="timezone"
             className="text-sm font-medium text-zinc-700"
@@ -150,7 +144,7 @@ export function DetailsTab() {
           <Select placeholder="Select a timezone..." options={TIMEZONES} />
         </div>
 
-        <div className="grid-cols-form grid gap-3 pt-5">
+        <div className="grid grid-cols-form gap-3 pt-5">
           <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
             Bio
             <span className="mt-0.5 block text-sm font-normal text-zinc-500">
@@ -165,39 +159,24 @@ export function DetailsTab() {
                 defaultValue="normal"
               />
               <div className="item-center flex gap-1">
-                <button
-                  type="button"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
+                <Button type="button" variant="ghost">
                   <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
-                  type="button"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
+                </Button>
+                <Button type="button" variant="ghost">
                   <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
-                  type="button"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
+                </Button>
+                <Button type="button" variant="ghost">
                   <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
-                  type="button"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
+                </Button>
+                <Button type="button" variant="ghost">
                   <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
-                  type="button"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
+                </Button>
+                <Button type="button" variant="ghost">
                   <ListOrdered
                     className="h-4 w-4 text-zinc-500"
                     strokeWidth={3}
                   />
-                </button>
+                </Button>
               </div>
             </div>
             <TextArea
@@ -207,7 +186,7 @@ export function DetailsTab() {
           </div>
         </div>
 
-        <div className="grid-cols-form grid gap-3 pt-5">
+        <div className="grid grid-cols-form gap-3 pt-5">
           <label className="text-sm font-medium text-zinc-700">
             Portfolio projects
             <span className="mt-0.5 block text-sm font-normal text-zinc-500">
@@ -222,18 +201,12 @@ export function DetailsTab() {
         </div>
 
         <div className="flex items-center justify-end gap-2 pt-5">
-          <button
-            type="button"
-            className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50"
-          >
+          <Button variant="outline" type="button">
             Cancel
-          </button>
-          <button
-            type="submit"
-            className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
-          >
+          </Button>
+          <Button variant="primary" type="submit" form="settings">
             Save
-          </button>
+          </Button>
         </div>
       </form>
     </div>
