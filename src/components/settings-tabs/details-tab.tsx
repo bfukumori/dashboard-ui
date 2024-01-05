@@ -202,7 +202,7 @@ export function DetailsTab() {
             </div>
             <TextArea
               id="bio"
-              defaultValue="I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."
+              defaultValue="I'm a Full Stack Developer based in Sao Paulo, Brazil. I specialize in React and NodeJS."
             />
           </div>
         </div>
