@@ -17,7 +17,7 @@ export function FileList() {
           name={name}
           size={size}
           onDelete={onFileRemove}
-          state="progress"
+          state="complete"
         />
       ))}
     </div>

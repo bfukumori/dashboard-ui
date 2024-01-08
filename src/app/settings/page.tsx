@@ -17,7 +17,9 @@ const TABS: Tab[] = [
 export default function Settings() {
   return (
     <>
-      <h1 className="text-3xl font-medium text-zinc-700">Settings</h1>
+      <h1 className="text-3xl font-medium text-zinc-700 dark:text-zinc-100">
+        Settings
+      </h1>
 
       <SettingsTabs tabs={TABS} />
     </>
