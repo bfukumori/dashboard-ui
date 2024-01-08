@@ -20,7 +20,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## About
 
-This project a dashboard style app made using TailwindCSS for study purposes.
+This project is a dashboard style app made using TailwindCSS for study purposes.
 
 ## Key points learned:
 
